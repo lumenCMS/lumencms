@@ -6,7 +6,6 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "5.0.*",
-                "intervention/image": "2.2.0",
 		"suroviy/xcore": "*",
                 "lara-cms/lara": "*",
                 "lara-cms/eva": "*"
@@ -46,10 +45,6 @@
 		"preferred-install": "dist"
 	},
 	"repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:suroviy/xcore.git"
-        },
         {
             "type": "vcs",
             "url":  "git@github.com:lara-cms/lara.git"
