@@ -1,13 +1,15 @@
 {
-	"name": "lumencms/lumencms",
+	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"suroviy/xcore": "dev-master",
-    		"lara-cms/lara": "dev-master",
-    		"lara-cms/eva": "dev-master"
+		"laravel/framework": "5.0.*",
+                "intervention/image": "2.2.0",
+		"suroviy/xcore": "*",
+                "lara-cms/lara": "*",
+                "lara-cms/eva": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
@@ -21,5 +23,40 @@
 			"App\\": "app/"
 		}
 	},
-	"minimum-stability": "dev-master"
+	"autoload-dev": {
+		"classmap": [
+			"tests/TestCase.php"
+		]
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-update-cmd": [
+			"php artisan clear-compiled",
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php -r \"copy('.env.example', '.env');\"",
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:suroviy/xcore.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:lara-cms/lara.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:lara-cms/eva.git"
+        }
+    ]
 }
