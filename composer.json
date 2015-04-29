@@ -44,18 +44,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:suroviy/xcore.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "git@github.com:lara-cms/lara.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "git@github.com:lara-cms/eva.git"
-        }
-    ]
+	"minimum-stability": "dev"
 }
